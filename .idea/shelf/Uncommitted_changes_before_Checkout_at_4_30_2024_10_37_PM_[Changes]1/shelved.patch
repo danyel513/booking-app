@@ -1,0 +1,153 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/compiler.xml	
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="BookingApp" />
++      </profile>
++    </annotationProcessing>
++  </component>
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="BookingApp" options="" />
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/jarRepositories.xml	
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/misc.xml	
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/reservationPack/Reservation.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package reservationPack;\r\n\r\nimport hotelPack.*;\r\nimport java.util.Date;\r\n\r\npublic class Reservation {\r\n    private final String clientName;\r\n    private Date checkInDate;\r\n    private Date checkOutDate;\r\n    private Room room;\r\n    private static int count=0;\r\n    private final int id;\r\n    private boolean status;\r\n\r\n    //constructor\r\n    public Reservation(String clientName, Date checkInDate, Date checkOutDate, Room room){\r\n        this.clientName=clientName;\r\n        this.checkInDate=checkInDate;\r\n        this.checkOutDate=checkOutDate;\r\n        this.room=room;\r\n        id=++count;\r\n        this.status=true;\r\n    }\r\n\r\n    //getter\r\n\r\n    public String getName(){\r\n        return this.clientName;\r\n    }\r\n\r\n    public Date getDateCheckIn(){\r\n        return this.checkInDate;\r\n    }\r\n\r\n    public Date getDateCheckOut(){\r\n        return this.checkOutDate;\r\n    }\r\n\r\n    public Room getRoom(){\r\n        return this.room;\r\n    }\r\n\r\n    public final int getID(){\r\n        return this.id;\r\n    }\r\n\r\n    public boolean getStatus(){\r\n        return this.status;\r\n    }\r\n\r\n\r\n    public void cancelRezervation(){\r\n        this.status=false;\r\n    }\r\n\r\n    //equals\r\n    public boolean equals(Object reservation){\r\n        if(reservation instanceof Reservation){\r\n            return ((Reservation) reservation).getID()== this.getID();\r\n        }\r\n        return false;\r\n    }\r\n\r\n    public String toString(){\r\n        return room.toString() + \" \"+ getDateCheckIn() + \" - \" + getDateCheckOut();\r\n       }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/reservationPack/Reservation.java b/src/main/java/reservationPack/Reservation.java
+--- a/src/main/java/reservationPack/Reservation.java	
++++ b/src/main/java/reservationPack/Reservation.java	
+@@ -49,7 +49,7 @@
+     }
+ 
+ 
+-    public void cancelRezervation(){
++    public void cancelReservation(){
+         this.status=false;
+     }
+ 
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	
++++ b/.idea/.gitignore	
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: target/classes/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/application.yml b/target/classes/application.yml
+new file mode 100644
+--- /dev/null	
++++ b/target/classes/application.yml	
+@@ -0,0 +1,1 @@
++spring.application.name=bookingapp
+Index: target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+new file mode 100644
+--- /dev/null	
++++ b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	
+@@ -0,0 +1,8 @@
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\exceptionsPack\AddRoomException.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\reservationPack\Reservation.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\hotelPack\Room.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\exceptionsPack\HotelException.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\org\example\Main.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\hotelPack\HotelChain.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\hotelPack\Hotel.java
++C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\java\exceptionsPack\ReservationException.java
+diff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+new file mode 100644

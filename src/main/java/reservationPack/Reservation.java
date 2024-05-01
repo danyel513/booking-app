@@ -1,15 +1,12 @@
 package reservationPack;
 
 import hotelPack.*;
-import lombok.Getter;
-
 import java.util.Date;
 
 public class Reservation {
     private final String clientName;
     private Date checkInDate;
     private Date checkOutDate;
-    @Getter
     private Room room;
     private static int count=0;
     private final int id;
@@ -39,6 +36,10 @@ public class Reservation {
         return this.checkOutDate;
     }
 
+    public Room getRoom(){
+        return this.room;
+    }
+
     public final int getID(){
         return this.id;
     }
@@ -48,7 +49,7 @@ public class Reservation {
     }
 
 
-    public void cancelReservation(){
+    public void cancelRezervation(){
         this.status=false;
     }
 

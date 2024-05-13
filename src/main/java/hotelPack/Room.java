@@ -1,12 +1,25 @@
 package hotelPack;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Room
 {
+    // getters
     // all attributes
+    @Getter
     private final int roomNumber;
+    @Getter
+    @Setter
     private int capacity;
+    @Getter
+    @Setter
     private float price;
     private boolean available;
+    @Getter
+    @Setter
+    private int roomId;
+    private static int count = 0;
 
     //constructors
     public Room(int roomNumber, int capacity, float price)
@@ -22,6 +35,7 @@ public class Room
         }
         this.price = price;
         this.available = true;
+        this.roomId = ++count;
     }
 
     public Room(int roomNumber, String type, float price)
@@ -39,22 +53,6 @@ public class Room
     }
 
 
-    // getters
-    public int getRoomNumber()
-    {
-        return roomNumber;
-    }
-
-    public float getPrice()
-    {
-        return price;
-    }
-
-    public int getCapacity()
-    {
-        return capacity;
-    }
-
     public boolean getAvailability()
     {
         return available;
@@ -64,16 +62,6 @@ public class Room
     public void changeAvailability()
     {
         this.available = !this.available;
-    }
-
-    public void setCapacity(int capacity)
-    {
-        this.capacity = capacity;
-    }
-
-    public void setPrice(float price)
-    {
-        this.price = price;
     }
 
     // convert capacity into room type

@@ -1,13 +1,20 @@
 package userPack;
 import exceptionsPack.*;
+import lombok.Getter;
+import lombok.Setter;
 import reservationPack.*;
 
-public class User{
+public class User
+{
     private String name;
     private final String email;
     private String phoneNumber;
     private String password;
+    @Getter
+    @Setter
     private Reservation reservation;
+    @Setter
+    private int userId;
 
 
     //constructor

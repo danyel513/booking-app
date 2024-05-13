@@ -1,8 +1,10 @@
-hotelPack\Hotel.class
-org\example\Main.class
-reservationPack\Reservation.class
 exceptionsPack\AddRoomException.class
 exceptionsPack\ReservationException.class
 hotelPack\HotelChain.class
 exceptionsPack\HotelException.class
+hotelPack\Hotel$HotelBuilder.class
 hotelPack\Room.class
+hotelPack\Hotel$HotelBuilderImpl.class
+hotelPack\Hotel.class
+reservationPack\Reservation.class
+databasePack\ReservationDBC.class

@@ -89,7 +89,8 @@ h1 {
     margin-bottom: 30px;
 }
 
-.reservation, .room, .staff-member, .message {
+/* Stilurile pentru .room */
+.room {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -98,7 +99,76 @@ h1 {
     border-bottom: 1px solid #ddd;
 }
 
-.reservations, .rooms, .statistics-content, .staff, .settings-content, .messages, .calendar-content  {
+.room p {
+    margin: 0; /* Elimină marginile implicite ale paragrafelor */
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-details p {
+    margin-bottom: 5px;
+}
+
+/* Stilurile pentru .rooms */
+.rooms {
+    display: flex;
+    flex-wrap: wrap; /* Permite wrap-ul elementelor pe linii noi */
+    gap: 20px;
+    background-color: #ebffeb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilurile pentru fiecare cameră individuală */
+.room-card {
+    flex: 1; /* Fiecare cameră ocupă spațiu egal */
+    min-width: 200px; /* Lățimea minimă a fiecărei camere */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.room-card p {
+    margin: 0;
+}
+
+.room-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Stilurile pentru tipul camerei */
+.room-type {
+    font-weight: bold;
+}
+
+/* Stilurile pentru numărul camerei */
+.room-number {
+    font-style: italic;
+    color: #666;
+}
+
+
+.reservation, .staff-member, .message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.reservations, .statistics-content, .staff, .settings-content, .messages, .calendar-content  {
     background-color: #ebffeb;
     padding: 20px;
     border-radius: 8px;

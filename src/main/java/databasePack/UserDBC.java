@@ -3,6 +3,7 @@ package databasePack;
 import exceptionsPack.HotelException;
 import exceptionsPack.UserException;
 import userPack.User;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,7 +41,8 @@ public class UserDBC
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getPhoneNumber());
             // password encryption
-            preparedStatement.setString(4, user.getPassword());
+            String encryptedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+            preparedStatement.setString(4, encryptedPassword);
             preparedStatement.setInt(5, user.getReservation().getId());
             preparedStatement.executeUpdate();
         }
@@ -48,5 +50,9 @@ public class UserDBC
         {
             throw new HotelException("Database could not be accessed: " + e.getMessage());
         }
+    }
+
+    public boolean checkPassword(String plainPassword, String hashedPassword) {
+        return BCrypt.checkpw(plainPassword, hashedPassword);
     }
 }

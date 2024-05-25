@@ -1,6 +1,7 @@
 package servicePack;
 
 import hotelPack.Hotel;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import repoPack.HotelRepository;
 import databasePack.HotelDBC;
 import exceptionsPack.HotelException;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @Service
 public class HotelService {
 

@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import static queries.Queries.INSERT_HOTEL_QUERY;
 
+
 @Component
 public class HotelDBC {
     private final Connection connection;

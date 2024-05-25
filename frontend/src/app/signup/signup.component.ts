@@ -5,6 +5,8 @@ import { HotelService } from '../services/hotel.service';
 import { UserService } from '../services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HotelTransfer } from '../services/hoteltransfer.service';
+import { Hotel } from '../../types';
 
 
 @Component({
@@ -23,7 +25,8 @@ export class SignupComponent implements OnInit {
     private documentService: DocumentService,
     private hotel: HotelService,
     private userService: UserService,
-    private router: Router 
+    private router: Router, 
+    private hotelTrans: HotelTransfer
   ) {
     this.userForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -72,10 +75,22 @@ export class SignupComponent implements OnInit {
   onSubmitHotelForm() 
   {
     const hotelData = this.hotelForm.value;
+    //console.log(this.hotelForm.value);
     this.hotel.createHotel(hotelData).subscribe(response => {
-      console.log('Hotel Data:', response);
+      console.log('Hotel Data to Database:', response);
     });
-    this.router.navigate(['/hotel-home']);
+    const hotelParam: Hotel = {
+      name: this.hotelForm.value.name,
+      email: this.hotelForm.value.email,
+      address: this.hotelForm.value.address,
+      city: this.hotelForm.value.city,
+      state: this.hotelForm.value.state,
+      phone: this.hotelForm.value.phone,
+      idHotels: 0
+    };
+    this.hotelTrans.setHotel(hotelParam);
+    this.router.navigate(['hotel-home']);
   }
   
 }
+

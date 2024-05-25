@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController
+@RestController("http://localhost:4200")
 @CrossOrigin("http://localhost:4200")
 public class HotelController {
 

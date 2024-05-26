@@ -1,0 +1,142 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e7ffff;
+}
+
+header {
+  background-color: #92b9b8;
+  padding: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%; /* Setăm înălțimea la 100% */
+  background-color: #618685;
+  padding: 20px;
+  overflow-y: auto; /* Permiterea derulării conținutului */
+  flex: 0 0 200px;
+}
+
+.book-button {
+  position: absolute; /* Setăm poziția absolută pentru buton */
+  bottom: 10px; /* Distanta de la buton la partea de jos a containerului */
+  left: 50%; /* Centrăm butonul pe orizontală */
+  transform: translateX(-50%); /* Centrăm butonul pe orizontală */
+  background-color: #618685; /* Culoarea de fundal a butonului */
+  color: white; /* Culoarea textului */
+  border: none; /* Eliminăm conturul butonului */
+  padding: 10px 20px; /* Spațiul între text și marginile butonului */
+  border-radius: 5px; /* Rotunjim marginile butonului */
+  cursor: pointer; /* Schimbăm cursorul la interacțiunea cu butonul */
+  margin-top: 10px; /* Spațiul de sus al butonului */
+}
+
+.book-button:hover {
+  background-color: #2c4d52; /* Schimbăm culoarea de fundal la hover */
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; 
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #e7ffff;
+  display: block;
+  font-size: 25px; /* Mărimea fontului */
+  font-family: 'Arial', sans-serif; /* Schimbăm fontul */
+  align-self: center;
+}
+
+.menu li a:hover {
+  background-color: #fff2df;
+  color: black;
+}
+
+main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.hotel-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel {
+  width: 45%;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #fff2df;
+}
+
+.hotel-info h2 {
+  margin-top: 10;
+  
+}
+
+.hotel-info p {
+  font-family: 'Arial', sans-serif; /* Schimbăm fontul */
+  text-align: justify; /* Aliniem textul la stânga */
+}
+
+.hotel-info {
+  position: relative;
+  font-size: medium;
+  font-family:'Courier New', Courier, monospace;
+  flex: 1; 
+  padding-right: 20px; 
+}
+
+.hotel-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.hotel-images img {
+  max-width: 80%;
+  height: 60%;
+  object-fit: cover
+}
+
+h1 {
+  font-size: 36px; /* Mărimea fontului */
+  font-weight: bold; /* Grosimea fontului */
+  color: #e7ffff; /* Culoarea textului */
+  margin-bottom: 20px; /* Spațiul de jos */
+}
+
+.colored
+{
+  color: #e7ffff;
+}
+
+.about-user {
+  text-decoration: none;
+  position: absolute; /* Setăm poziția absolută pentru a fixa informațiile în partea de jos a barei laterale */
+  bottom: 20px; /* Ajustăm distanța de la partea de jos */
+  left: 0;
+  width: 100%; /* Lățimea va fi egală cu lățimea barei laterale */
+  padding-left: 20px; /* Adăugăm un spațiu la stânga pentru a se potrivi cu stilul barei laterale */
+  color: #e7ffff; /* Schimbăm culoarea textului pentru a fi vizibil pe fundalul barei laterale */
+  list-style-type: none;
+  padding: 0;
+  text-align: center; 
+}
+
+.about-user li {
+  margin-bottom: 5px;
+}

@@ -4,6 +4,7 @@ import { Hotel } from '../../types';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-hotel-home',
   standalone: true,

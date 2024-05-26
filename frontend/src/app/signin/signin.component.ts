@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HotelTransfer } from '../services/hoteltransfer.service';
+import { HotelTransfer, UserTransfer } from '../services/hoteltransfer.service';
 import { UserService } from '../services/user.service';
 import { HotelService } from '../services/hotel.service';
 import { DocumentService } from '../services/document.service';
-import { Hotel } from '../../types';
+import { Hotel, User } from '../../types';
 @Component({
   selector: 'app-signin',
   standalone: true,
@@ -24,7 +24,8 @@ export class SigninComponent {
     private documentService: DocumentService,
     private hotel2: HotelService,
     private userService: UserService,
-    private hotelTrans: HotelTransfer
+    private hotelTrans: HotelTransfer,
+    private userTrans: UserTransfer
   )
   {
     this.userForm = this.formBuilder.group({
@@ -38,8 +39,6 @@ export class SigninComponent {
   });}
 
   signinType: string = 'user';
-  user = { username: '', password: '' };
-  hotel = { hotelName: '', hotelEmail: '' };
 
   onTypeChange(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
@@ -47,7 +46,21 @@ export class SigninComponent {
   }
 
   onSubmit() {
-    const hotelParam: Hotel = {
+    if (this.signinType === 'user')
+    {
+      const userParam: User = {
+        name: this.userForm.value.username,
+        email: this.userForm.value.username + "@email.com",
+        phone: "+78624533",
+        password: this.userForm.value.password
+      };
+      this.userTrans.setUser(userParam);
+      console.log('User Sign In:', userParam);
+      this.router.navigate(['user-home']);
+    }
+    else
+    {
+      const hotelParam: Hotel = {
       name: this.hotelForm.value.name,
       email: this.hotelForm.value.email,
       address: "str Sunny street, nr 56",
@@ -55,15 +68,12 @@ export class SigninComponent {
       state: "United Kindgdon",
       phone: "+78624533",
       idHotels: 0
-    };
+      };
     this.hotelTrans.setHotel(hotelParam);
-    if (this.signinType === 'user') {
-      console.log('User Sign In:', this.user);
-      this.router.navigate(['user-home']);
-    } else {
-      console.log('Hotel Sign In:', this.hotel);
-      this.router.navigate(['hotel-home']);
+    console.log('Hotel Sign In:', hotelParam);
+    this.router.navigate(['hotel-home']);
     }
+  }
     
   }
-}
+

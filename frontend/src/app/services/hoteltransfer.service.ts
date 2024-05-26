@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Hotel } from '../../types';
+import { Hotel, User } from '../../types';
 
 @Injectable({
   providedIn: 'root'
@@ -19,3 +19,23 @@ export class HotelTransfer {
     return this.hotelSubject.getValue();
   }
 }
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserTransfer {
+  private userSubject = new BehaviorSubject<User | null>(null);
+  user$ = this.userSubject.asObservable();
+
+  constructor() {}
+
+  setUser(user: User) {
+    this.userSubject.next(user);
+  }
+
+  getUser(): User | null{
+    return this.userSubject.getValue();
+  }
+}
+

@@ -1,23 +1,24 @@
 <body>
   <header>
-    <h1> Booking App - <span class="colored">User page</span></h1>
+    <h1> Booking App - <span class="colored">Bun venit {{ user?.name }} </span></h1>
   </header>
   <aside class="sidebar">
     <br><br>
     <ul class="menu">
-      <li><a href="#"> Profil <br></a></li>
-      <li><a href="#"> Setări <br></a></li>
-      <li><a href="#"> Mesaje <br></a></li>
-      <li><a href="#"> Notificări <br></a></li>
-      <li><a href="#"> Rezervari <br></a></li>
-      <li><a href="#"> Oferte <br></a></li>
+      <li><a > Profil <br></a></li>
+      <li><a > Setări <br></a></li>
+      <li><a > Mesaje <br></a></li>
+      <li><a > Notificări <br></a></li>
+      <li><a > Rezervari <br></a></li>
+      <li><a > Oferte <br></a></li>
     </ul>
     <br><br><br><br>
     <ul class="about-user">
-      <li>John Doe</li>
-      <li>john.doe.com</li>
-      <li>123-456-7890</li>
-      
+      <li> SIGNED IN AS:</li>
+      <br>
+      <li>{{ user?.name }}</li>
+      <li>{{ user?.email }}</li>
+      <li>{{ user?.phone }}</li>  
     </ul>
   </aside>
   <main>

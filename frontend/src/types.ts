@@ -42,3 +42,10 @@ export interface PaginationParams
     page: number;
     perPage: number;
 }
+
+export interface HotelImg
+{
+    name: string;
+    imageUrl: string;
+    description: string;
+}

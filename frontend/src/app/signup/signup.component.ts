@@ -92,5 +92,12 @@ export class SignupComponent implements OnInit {
     this.router.navigate(['hotel-home']);
   }
   
+  redirect()
+  {
+    this.router.navigate(['signin']);
+  }
+
 }
+
+
 

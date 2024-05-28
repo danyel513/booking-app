@@ -18,4 +18,3 @@ spring:
     init:
       mode: never
       continue-on-error: false
-

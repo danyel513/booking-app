@@ -1,15 +1,20 @@
 package reservationPack;
 
 import hotelPack.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
 public class Reservation {
+    @Getter
     private final String clientName;
     private Date checkInDate;
     private Date checkOutDate;
+    @Getter
     private Room room;
-    private static int count=0;
-    private final int id;
+    @Setter
+    private int id;
     private boolean status;
 
     //constructor
@@ -18,15 +23,10 @@ public class Reservation {
         this.checkInDate=checkInDate;
         this.checkOutDate=checkOutDate;
         this.room=room;
-        id=++count;
         this.status=true;
     }
 
     //getter
-
-    public String getName(){
-        return this.clientName;
-    }
 
     public Date getDateCheckIn(){
         return this.checkInDate;
@@ -36,11 +36,7 @@ public class Reservation {
         return this.checkOutDate;
     }
 
-    public Room getRoom(){
-        return this.room;
-    }
-
-    public final int getID(){
+    public final int getId(){
         return this.id;
     }
 
@@ -48,15 +44,23 @@ public class Reservation {
         return this.status;
     }
 
+    public int getIntStatus()
+    {
+        if(this.status)
+        {
+            return 1;
+        }
+        return 0;
+    }
 
-    public void cancelRezervation(){
+    public void cancelReservation(){
         this.status=false;
     }
 
     //equals
     public boolean equals(Object reservation){
         if(reservation instanceof Reservation){
-            return ((Reservation) reservation).getID()== this.getID();
+            return ((Reservation) reservation).getId()== this.getId();
         }
         return false;
     }

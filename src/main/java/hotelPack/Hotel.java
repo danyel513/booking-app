@@ -1,20 +1,49 @@
 package hotelPack;
 
-import java.util.ArrayList;
+import exceptionsPack.RoomException;
+import exceptionsPack.ReservationException;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotEmpty;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import reservationPack.Reservation;
-import exceptionsPack.*;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor(force = true)
+@SuperBuilder
 public class Hotel
 {
+
+    // getters
     // attributes
-    private final int id;
+    @Getter
+    @Id
+    @Setter
+    private int id;
+    @Setter
+    @Getter
+    @NotEmpty(message = "Name cannot be empty.")
     private String name;
+    @Getter
+    @NotEmpty(message = "Address cannot be empty.")
     private final String address;
+    @Getter
+    @NotEmpty(message = "City cannot be empty.")
     private final String city;
+    @Getter
+    @NotEmpty(message = "State cannot be empty.")
     private final String state;
+    @Setter
+    @Getter
     private String phone;
+    @Setter
+    @Getter
+    @NotEmpty(message = "Email cannot be empty.")
     private String email;
-    private static int cod = 0;
     private final ArrayList<Room> rooms;
     private final ArrayList<Reservation> reservations;
 
@@ -27,31 +56,30 @@ public class Hotel
         this.state = state;
         this.phone = phone;
         this.email = email;
-        this.id = cod++;
-        rooms = new ArrayList<Room>();
-        reservations = new ArrayList<Reservation>();
+        rooms = new ArrayList<>();
+        reservations = new ArrayList<>();
     }
 
 
     // methods to add rooms to array
-    public void addRoomsByType(int nrOfRooms, String type, float price) throws AddRoomException
+    public void addRoomsByType(int nrOfRooms, String type, float price) throws RoomException
     {
         for(int i = 1; i <= nrOfRooms; i++)
         {
             if(!rooms.add(new Room(i, type, price)))
             {
-                throw new AddRoomException("The room was not added.");
+                throw new RoomException("The room was not added.");
             }
         }
     }
 
-    public void addRoomsByCapacity(int nrOfRooms, int capacity, float price) throws AddRoomException
+    public void addRoomsByCapacity(int nrOfRooms, int capacity, float price) throws RoomException
     {
         for(int i = 1; i <= nrOfRooms; i++)
         {
             if(!rooms.add(new Room(i, capacity, price)))
             {
-                throw new AddRoomException("The room was not added.");
+                throw new RoomException("The room was not added.");
             }
         }
     }
@@ -107,22 +135,22 @@ public class Hotel
     // reservations manage methods
     public void addReservation(Reservation reservation) throws ReservationException
     {
+        if (reservations == null) throw new AssertionError();
         if(!reservations.contains(reservation))
         {
             if(!reservations.add(reservation))
-            {
                 throw new ReservationException("Failed to add the reservation.");
-            }
         }
     }
 
     public void clearAllInactiveReservations()
     {
-        reservations.removeIf(r -> !r.getStatus());
+        Objects.requireNonNull(reservations).removeIf(r -> !r.getStatus());
     }
 
     public void deleteReservation(Reservation reservation) throws ReservationException
     {
+        if (reservations == null) throw new AssertionError();
         if(reservations.contains(reservation))
         {
             if(!reservations.remove(reservation))
@@ -131,60 +159,6 @@ public class Hotel
             }
             reservation.cancelReservation();
         }
-    }
-
-
-    // getters
-    public int getId()
-    {
-        return id;
-    }
-
-    public String getAddress()
-    {
-        return address;
-    }
-
-     public String getName()
-     {
-         return name;
-     }
-
-     public String getCity()
-     {
-         return city;
-     }
-
-     public String getState()
-     {
-         return state;
-     }
-
-     public String getPhone()
-     {
-        return phone;
-     }
-
-    public String getEmail()
-    {
-        return email;
-    }
-
-    // setters
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    public void setPhone(String phone)
-    {
-        this.phone = phone;
-    }
-
-    public void setEmail(String email)
-    {
-        this.email = email;
     }
 
     // basic methods overwrite

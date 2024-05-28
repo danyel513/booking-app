@@ -4,7 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c055fd7-8768-4372-8c10-e0bcd07b0a09" name="Changes" comment="spring boot added" />
+    <list default="true" id="2c055fd7-8768-4372-8c10-e0bcd07b0a09" name="Changes" comment="spring boot added">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookingApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/databasePack/HotelDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/databasePack/ReservationDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/databasePack/RoomDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/databasePack/UserDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptionsPack/UserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/databasePack/HotelDBCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/databasePack/ReservationDBCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/databasePack/RoomDBCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/databasePack/UserDBCTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]/AddRoomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]/HotelException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]/ReservationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]1/AddRoomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]1/HotelException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]1/ReservationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_30_2024_10_37_PM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_24_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_24_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_34_PM_[Changes]/AddRoomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_34_PM_[Changes]/HotelException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_34_PM_[Changes]/ReservationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_34_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_10_34_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_7_40_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_30_2024_7_40_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptionsPack/AddRoomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptionsPack/RoomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotelPack/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotelPack/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotelPack/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotelPack/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bookingapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bookingapp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reservationPack/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reservationPack/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userPack/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userPack/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exceptionsPack/AddRoomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exceptionsPack/ReservationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exceptionsPack/ReservationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hotelPack/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hotelPack/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hotelPack/HotelChain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hotelPack/HotelChain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hotelPack/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hotelPack/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/bookingapp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/bookingapp/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reservationPack/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reservationPack/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userPack/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userPack/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -42,6 +103,9 @@
     &quot;accountId&quot;: &quot;d3ded5c5-812c-4a74-adfa-82b3e3b22e67&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -53,6 +117,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Hotel.executor": "Run",
+    "JUnit.HotelDBCTest.executor": "Run",
+    "JUnit.HotelLinkTest.executor": "Run",
+    "JUnit.ReservationDBCTest.executor": "Run",
+    "JUnit.RoomDBCTest.executor": "Run",
+    "JUnit.UserDBCTest.executor": "Run",
     "Maven.BookingApp [compile].executor": "Run",
     "Maven.BookingApp [test].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -63,7 +133,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Main (1).executor": "Run",
     "Spring Boot.Main.executor": "Run",
+    "git-widget-placeholder": "spring-boot",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/danie/OneDrive - Universitatea Politehnica Timisoara/proiecte/FIS/BookingApp/src/main/java/org",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +152,65 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\danie\OneDrive - Universitatea Politehnica Timisoara\proiecte\FIS\BookingApp\src\main\resources" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Hotel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hotelPack.Hotel" />
+      <module name="BookingApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hotelPack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelLinkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="linkToDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="linkToDatabase" />
+      <option name="MAIN_CLASS_NAME" value="linkToDatabase.HotelLinkTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="databasePack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="databasePack" />
+      <option name="MAIN_CLASS_NAME" value="databasePack.RoomDBCTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.bookingapp.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RoomDBCTest" />
+        <item itemvalue="Application.Hotel" />
+        <item itemvalue="JUnit.HotelLinkTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -109,6 +240,10 @@
       <workItem from="1714506978250" duration="253000" />
       <workItem from="1714509253726" duration="4348000" />
       <workItem from="1714574952130" duration="2688000" />
+      <workItem from="1714630428322" duration="10814000" />
+      <workItem from="1714673683590" duration="10439000" />
+      <workItem from="1714850770598" duration="734000" />
+      <workItem from="1715619425604" duration="8966000" />
     </task>
     <task id="LOCAL-00001" summary="classes done">
       <option name="closed" value="true" />

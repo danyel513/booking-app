@@ -1,0 +1,49 @@
+<body>
+    <div class="signin-container">
+        <div class="form-wrapper">
+          <h1>Sign In</h1>
+  
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="type">Sign in as</label>
+              <select id="type" [(ngModel)]="signinType" name="type" (change)="onTypeChange($event)">
+                <option value="user">User</option>
+                <option value="hotel">Hotel Company</option>
+              </select>
+            </div>
+            <form [formGroup]="userForm"> 
+            <div *ngIf="signinType === 'user'">
+              <div class="form-group" >
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" formControlName="name" [(ngModel)]="user.username" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" formControlName="massword" [(ngModel)]="user.password" required>
+              </div>
+            </div>
+            </form>
+            <form [formGroup]="hotelForm"> 
+            <div *ngIf="signinType === 'hotel'" >
+              <div class="form-group">
+                <label for="hotelName">Hotel Name</label>
+                <input type="text" id="hotelName" name="hotelName" formControlName="name" [(ngModel)]="hotel.hotelName" required>
+              </div>
+              <div class="form-group">
+                <label for="hotelEmail">Email</label>
+                <input type="email" id="hotelEmail" name="hotelEmail" formControlName="email" [(ngModel)]="hotel.hotelEmail" required>
+              </div>
+            </div>
+          </form>
+            <button type="submit">Sign In</button>
+          </form>
+        </div>
+        <div class="description">
+          <h4>Detalii despre autentificare</h4>
+          Va rugam introduceti datele aferente conectarii la contul dumneavoastra. Autentificarea companiilor hoteliere va trebui sa fie facuta prin intermediul email-ului.
+          Se va trimite o cerere pe mail pentru adaugarea detaliata a detaliilor aferente companiei hoteliere.
+        </div>
+      </div>
+     
+      
+</body>

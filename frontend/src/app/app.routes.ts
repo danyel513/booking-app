@@ -1,7 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { HotelHomeComponent } from './hotel-home/hotel-home.component';
-import { NgModule } from '@angular/core';
+import { SigninComponent } from './signin/signin.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 export const routes: Routes = [
     {
@@ -9,15 +10,23 @@ export const routes: Routes = [
         component: SignupComponent
     },
     
+    {
+        path: 'signup',
+        component: SignupComponent
+    },
+    
     { 
         path: 'hotel-home', 
         component: HotelHomeComponent 
+    },
+
+    { 
+        path: 'signin', 
+        component: SigninComponent 
+    },
+
+    { 
+        path: 'user-home', 
+        component: UserHomeComponent 
     }
 ];
-
-
-// @NgModule({
-//     imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
-//     exports: [RouterModule]
-//   })
-//   export class AppRoutingModule { }

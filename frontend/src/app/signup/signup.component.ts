@@ -5,8 +5,8 @@ import { HotelService } from '../services/hotel.service';
 import { UserService } from '../services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HotelTransfer } from '../services/hoteltransfer.service';
-import { Hotel } from '../../types';
+import { HotelTransfer, UserTransfer } from '../services/hoteltransfer.service';
+import { Hotel, User } from '../../types';
 
 
 @Component({
@@ -26,11 +26,13 @@ export class SignupComponent implements OnInit {
     private hotel: HotelService,
     private userService: UserService,
     private router: Router, 
-    private hotelTrans: HotelTransfer
+    private hotelTrans: HotelTransfer,
+    private userTrans: UserTransfer
   ) {
     this.userForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
 
@@ -70,6 +72,14 @@ export class SignupComponent implements OnInit {
     this.userService.createUser(userData).subscribe(response => {
       console.log('User Data:', response);
     });
+    const userParam: User = {
+      name: this.userForm.value.name,
+      email: this.userForm.value.email,
+      phone: this.userForm.value.phone,
+      password: this.userForm.value.password
+    };
+    this.userTrans.setUser(userParam);
+    this.router.navigate(['user-home']);
   }
 
   onSubmitHotelForm() 

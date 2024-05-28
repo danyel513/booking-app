@@ -15,11 +15,11 @@
             <div *ngIf="signinType === 'user'">
               <div class="form-group" >
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" formControlName="name" [(ngModel)]="user.username" required>
+                <input type="text" id="username" name="username" formControlName="username"  required>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" formControlName="massword" [(ngModel)]="user.password" required>
+                <input type="password" id="password" name="password" formControlName="password"  required>
               </div>
             </div>
             </form>
@@ -27,11 +27,11 @@
             <div *ngIf="signinType === 'hotel'" >
               <div class="form-group">
                 <label for="hotelName">Hotel Name</label>
-                <input type="text" id="hotelName" name="hotelName" formControlName="name" [(ngModel)]="hotel.hotelName" required>
+                <input type="text" id="hotelName" name="hotelName" formControlName="name" required>
               </div>
               <div class="form-group">
                 <label for="hotelEmail">Email</label>
-                <input type="email" id="hotelEmail" name="hotelEmail" formControlName="email" [(ngModel)]="hotel.hotelEmail" required>
+                <input type="email" id="hotelEmail" name="hotelEmail" formControlName="email"  required>
               </div>
             </div>
           </form>

@@ -1,0 +1,201 @@
+<body>
+    <header>
+        <h1>Booking App - <span class="greentxt">{{ hotel?.name }}</span></h1>
+        <br>
+        <nav>
+          <ul class="menu">
+            <li><a (click)="scrollToSection('active-reservations')">Rezervări Active</a></li>
+            <li><a (click)="scrollToSection('available-rooms')">Camere Disponibile</a></li>
+            <li><a (click)="scrollToSection('manage-rooms')">Gestionare Camere</a></li>
+            <li><a (click)="scrollToSection('statistics')">Statistici și Rapoarte</a></li>
+            <li><a (click)="scrollToSection('settings')">Setări Hotel</a></li>
+            <li><a (click)="scrollToSection('calendar')">Calendar</a></li>
+            <li><a (click)="scrollToSection('hotel-details')">Detalii Hotel</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      
+
+    <div class="container">
+        <div id="active-reservations" class="dashboard-section">
+            <h2>Rezervări Active</h2>
+            <div class="reservations">
+                <div class="reservation">
+                    <p><strong>Client:</strong> John Doe</p>
+                    <p><strong>Data Check-in:</strong> 01/06/2024</p>
+                    <p><strong>Data Check-out:</strong> 05/06/2024</p>
+                    <p><strong>Camera:</strong> Deluxe Suite - number: 55</p>
+                </div>
+                <div class="reservation">
+                    <p><strong>Client:</strong> Jane Smith</p>
+                    <p><strong>Data Check-in:</strong> 10/06/2024</p>
+                    <p><strong>Data Check-out:</strong> 15/06/2024</p>
+                    <p><strong>Camera:</strong> Single Room - number: 42</p>
+                </div>
+                <div class="reservation">
+                    <p><strong>Client:</strong> John Doe</p>
+                    <p><strong>Data Check-in:</strong> 03/06/2024</p>
+                    <p><strong>Data Check-out:</strong> 07/06/2024</p>
+                    <p><strong>Camera:</strong> Deluxe Suite - number: 101</p>
+                </div>
+                
+                <div class="reservation">
+                    <p><strong>Client:</strong> Alice Johnson</p>
+                    <p><strong>Data Check-in:</strong> 12/06/2024</p>
+                    <p><strong>Data Check-out:</strong> 18/06/2024</p>
+                    <p><strong>Camera:</strong> Double Room - number: 205</p>
+                </div>
+                
+                <div class="reservation">
+                    <p><strong>Client:</strong> Emily Brown</p>
+                    <p><strong>Data Check-in:</strong> 25/06/2024</p>
+                    <p><strong>Data Check-out:</strong> 30/06/2024</p>
+                    <p><strong>Camera:</strong> Suite - number: 301</p>
+                </div>
+                
+                <div class="reservation">
+                    <p><strong>Client:</strong> Michael Wilson</p>
+                    <p><strong>Data Check-in:</strong> 08/06/2024</p>
+                    <p><strong>Data Check-out:</strong> 14/06/2024</p>
+                    <p><strong>Camera:</strong> Single Room - number: 42</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="available-rooms" class="dashboard-section">
+            <h2>Camere Disponibile</h2>
+            <div class="rooms">
+                <div class="room-card">
+                    <div class="room-details">
+                        <h3>Single Room</h3>
+                        <p><strong>Tip Cameră:</strong> Single Room</p>
+                        <p><strong>Status:</strong> Disponibile</p>
+                        <p><strong>Număr:</strong> 10</p>
+                    </div>
+                </div>
+                
+                <div class="room-card">
+                    <div class="room-details">
+                        <h3>Double Room</h3>
+                        <p><strong>Tip Cameră:</strong> Double Room</p>
+                        <p><strong>Status:</strong> Disponibile</p>
+                        <p><strong>Număr:</strong> 7</p>
+                    </div>
+                </div>
+                
+                <div class="room-card">
+                    <div class="room-details">
+                        <h3>Triple Room</h3>
+                        <p><strong>Tip Cameră:</strong> Triple Room</p>
+                        <p><strong>Status:</strong> Disponibile</p>
+                        <p><strong>Număr:</strong> 5</p>
+                    </div>
+                </div>
+                
+                <div class="room-card">
+                    <div class="room-details">
+                        <h3>Apartament</h3>
+                        <p><strong>Tip Cameră:</strong> Apartament</p>
+                        <p><strong>Status:</strong> Disponibile</p>
+                        <p><strong>Număr:</strong> 3</p>
+                    </div>
+                </div>
+                
+                <div class="room-card">
+                    <div class="room-details">
+                        <h3>Suite</h3>
+                        <p><strong>Tip Cameră:</strong> Suite</p>
+                        <p><strong>Status:</strong> Disponibile</p>
+                        <p><strong>Număr:</strong> 6</p>
+                    </div>
+                </div>
+                
+                <div class="room-card">
+                    <div class="room-details">
+                        <h3>Deluxe Suite</h3>
+                        <p><strong>Tip Cameră:</strong> Deluxe Suite</p>
+                        <p><strong>Status:</strong> Disponibile</p>
+                        <p><strong>Număr:</strong> 2</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="manage-rooms" class="dashboard-section">
+            <h2>Gestionare Camere</h2>
+            <div class="rooms">
+                <div class="room" *ngFor="let room of rooms; let i = index">
+                    <p><strong>Tip Cameră:</strong> {{ room.type }}</p>
+                    <p><strong>Status:</strong> {{ room.status }}</p>
+                    <button>Add</button>
+                    <button>Remove</button>
+                    <button (click)="changeStatus(i)">Change</button>
+                </div>
+            </div>
+            <br>
+            <button class="add-room">Adaugă Cameră</button>
+        </div>
+    </div>
+    
+    
+    <div class="container">
+        <div id="statistics" class="dashboard-section">
+            <h2>Statistici și Rapoarte</h2>
+            <div class="statistics-content">
+                <p><strong>Venituri:</strong> 50,000 RON</p>
+                <p><strong>Cheltuieli:</strong> 20,000 RON</p>
+                <p><strong>Rata de Ocupare:</strong> 75%</p>
+                <!-- Adăugați alte statistici relevante -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="settings" class="dashboard-section">
+          <h2>Setări Hotel</h2>
+          <form #hotelForm="ngForm" (ngSubmit)="onSubmit(hotelForm)">
+            <div class="settings-content" *ngIf="hotel">
+              <p><strong>Nume Hotel:<br></strong><br> 
+                <input type="text" name="name" [(ngModel)]="hotel.name" required>
+              </p>
+              <p><strong>Adresă:<br></strong><br> 
+                <input type="text" name="address" [(ngModel)]="hotel.address" required>
+              </p>
+              <p><strong>Telefon:<br></strong><br> 
+                <input type="text" name="phone" [(ngModel)]="hotel.phone" required>
+              </p>
+              <p><strong>Email:<br></strong><br> 
+                <input type="text" name="email" [(ngModel)]="hotel.email" required>
+              </p>
+              <button type="submit">Salvează</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+    <div class="container">
+        <div id="calendar" class="dashboard-section">
+            <h2>Calendar</h2>
+            <div class="calendar-content">
+                <h3>Calendarul rezervărilor și evenimentelor</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="hotel-details" class="dashboard-section">
+            <h2>Detalii Hotel</h2>
+            <p><strong>Nume Hotel:</strong> {{ hotel?.name }}</p>
+            <p><strong>Adresă:</strong> {{ hotel?.address }}, {{ hotel?.city }}, {{ hotel?.state }}</p>
+            <p><strong>Telefon:</strong> {{ hotel?.phone }}</p>
+            <p><strong>Email:</strong> {{ hotel?.email }}</p>
+        </div>
+    </div>
+    <footer>
+        <p><strong>Contact:</strong> {{ hotel?.address }}, {{ hotel?.city }}, {{ hotel?.state }} | Telefon: {{ hotel?.phone }} | Email: {{ hotel?.email }}</p>
+    </footer>
+</body>

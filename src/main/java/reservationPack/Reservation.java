@@ -6,14 +6,13 @@ import lombok.Setter;
 
 import java.util.Date;
 
+@Setter
+@Getter
 public class Reservation {
-    @Getter
     private final String clientName;
     private Date checkInDate;
     private Date checkOutDate;
-    @Getter
     private Room room;
-    @Setter
     private int id;
     private boolean status;
 

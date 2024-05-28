@@ -9,6 +9,7 @@ import reservationPack.Reservation;
 import userPack.User;
 import java.util.Date;
 
+
 import java.sql.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -55,6 +56,7 @@ public class UserDBCTest
             assertEquals(testUser.getName(), retrievedUser.getName(), "Inserted user name should match.");
             assertEquals(testUser.getEmail(), retrievedUser.getEmail(), "Inserted user email should match.");
             assertEquals(testUser.getReservation(), retrievedUser.getReservation(), "Inserted user reservation should match.");
+            assertTrue(userDBC.checkPassword(testUser.getPassword(), retrievedUser.getPassword()), "Password check failed.");
         }
         catch(SQLException e)
         {

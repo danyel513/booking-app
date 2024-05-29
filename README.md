@@ -102,20 +102,4 @@
 5. Personalized feedback with pros and cons.
 6. AI-based personalized recommendations based on travel history.
 
----
 
-## Credits
-
-- **Template**: Created by Slidesgo
-- **Icons**: Provided by Flaticon
-- **Infographics & Images**: Provided by Freepik
-
----
-
-Thank you for your attention!
-
----
-
-[Project Presentation](https://bit.ly/3A1uf1Q)  
-[Detailed Documentation](http://bit.ly/2TyoMsr)  
-[Demo Video](http://bit.ly/2TtBDfr)
